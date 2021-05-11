@@ -1,4 +1,5 @@
-var timer = require('./timer') ;
+var timer = require('./timeInterval') ;
+
 
 
 console.log("**** Node.js is Executing ******") ;
