@@ -1,4 +1,4 @@
-var myProcess = require('./processObject') ;
+var myProcess = require('./training-modules/external-input/use-inquire') ;
 
 
 

@@ -10,6 +10,8 @@
   "author": "Emmanuel",
   "license": "ISC",
   "dependencies": {
+    "chalk-pipe": "^5.1.1",
+    "inquirer": "^8.0.0",
     "minimist": "^1.2.5"
   }
 }
