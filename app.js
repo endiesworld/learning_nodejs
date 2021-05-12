@@ -1,10 +1,10 @@
-var timer = require('./timeInterval') ;
+var myProcess = require('./processObject') ;
 
 
 
 console.log("**** Node.js is Executing ******") ;
 
-timer() ;
+myProcess() ;
 
 
 
