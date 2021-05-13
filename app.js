@@ -1,4 +1,4 @@
-var myProcess = require('./training-modules/external-input/use-inquire') ;
+var myProcess = require('./training-modules/event-emitter') ;
 
 
 
