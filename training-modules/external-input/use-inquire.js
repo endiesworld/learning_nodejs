@@ -3,9 +3,18 @@ const inquirer = require('inquirer');
 
 var questions1 = [
   {
-    type: 'input',
-    name: 'first_name',
-    message: "What's your first name",
+    type: 'list',
+        name: 'sum-up',
+        message: "Enter A to chose the loop method, B for mathematical method",
+        choices: [
+            new inquirer.Separator(' = Methods = '),
+            {
+                name: 'loopMethod'
+            },
+            {
+                name:'mathMethod'
+            }
+        ]
   },
   {
     type: 'input',
@@ -97,7 +106,7 @@ function operation() {
  inquirer
   .prompt(questions1)
   .then((answers) => {
-    console.log(JSON.stringify(answers, null, '  '));
+    console.log(answers);
   });
 }
 
