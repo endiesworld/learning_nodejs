@@ -2,13 +2,16 @@ const path = require('path') ;
 const fs = require("fs") ;
 
 function operation(){
-    console.log(path.basename('/test/something.txt') )  //something.txt)
+    //console.log(path.basename('/test/something.txt') )  //something.txt)
     const name = 'Emmanuel'
-    console.log(path.join('/', 'users', name, 'notes.txt')) ;
+    //console.log(path.join('/', 'users', name, 'notes.txt')) ;
     const fileName = 'tutorial.txt' ;
     const filePath = path.resolve(fileName) ;
+    console.log('file path: ', filePath) ;
 
-    const content = " Begining of File" ;
+    // WRITE TO A FILE, IF FILE DOES NOT EXIST, CREAT WITH THE USE OF FLAG
+/***
+     const content = " Begining of File" ;
 
     fs.writeFile(filePath, content, { flag: "a+" }, (err) => {
         if (err) {
@@ -18,6 +21,7 @@ function operation(){
         console.log("Content written succesfully")
     });
 
+    // READ FILE STATISTICAL INFO
     fs.stat(filePath, (err, stats) => {
         if (err) {
             console.error(err)
@@ -29,6 +33,8 @@ function operation(){
         console.log(`is it a symbolic link: ${stats.isSymbolicLink() }`)//false
         console.log(`file size: ${stats.size}`) //1024000
     })
+*/
+    
 }
 
 module.exports = {operation} ;
