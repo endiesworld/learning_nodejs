@@ -1,10 +1,13 @@
 const express = require('express') ;
+const session = require('express-session') ;
+const path = require('path') ;
 
 
 function operation(){
     const app = express() ;
+    
   
-    let clientPublic = 'C:\Users\emmanuel.okoro\Documents\HTML_FOLDER\projects_2021\react-self-training\todo-list\build' ;
+    //let __dirname = 'C:\Users\emmanuel.okoro\Documents\HTML_FOLDER\projects_2021\react-self-training\todo-list' ;
     // app.get('/', (req, res) => {
     //     console.log('request queries are: ', req.params)
     //     console.log('request queries are: ', req.query)
@@ -13,7 +16,24 @@ function operation(){
     // app.get('/about', (req, res) => {
     // res.render('about')
     // });
-    app.use("/",express.static('public'))
+    
+    app.use('/',express.static('public'));
+   
+    app.use('/static', (req, res)=>{
+        console.log("request body: ", req);
+        res.send(req.params)
+    });
+     app.use(session({
+        'secret': '343ji43j4n3jn4jk3n' //add a random string here
+    }))
+
+    app.get("/others", (req,res) =>{
+        req.session.name +=  1 ;
+        console.log(req.session) ;
+        res.send(`your session token is: ${req.session.name}`)
+    })
+
+   
 
     app.listen(3000, () => console.log('Server ready'))
 }
