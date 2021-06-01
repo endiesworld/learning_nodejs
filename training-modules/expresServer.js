@@ -7,7 +7,7 @@ function operation(){
     const app = express() ;
     
   
-    //let __dirname = 'C:\Users\emmanuel.okoro\Documents\HTML_FOLDER\projects_2021\react-self-training\todo-list' ;
+    let myPublic = 'C:/Users/emmanuel.okoro/Documents/HTML_FOLDER/projects_2021/react-self-training/todo-list/build' ;
     // app.get('/', (req, res) => {
     //     console.log('request queries are: ', req.params)
     //     console.log('request queries are: ', req.query)
@@ -17,7 +17,7 @@ function operation(){
     // res.render('about')
     // });
     
-    app.use('/',express.static('public'));
+    app.use('/',express.static(myPublic));
    
     app.use('/static', (req, res)=>{
         console.log("request body: ", req);
