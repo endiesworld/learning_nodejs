@@ -1,11 +1,11 @@
-var myProcess = require('./training-modules/expresServer') ;
+var myProcess = require('./training-modules/external-input/processStdInOut') ;
 
 
 
 console.log("**** Node.js is Executing ******") ;
 
-myProcess.operation() ;
+myProcess.myProcess() ;
 
 
+console.log("**** Node.js completes running of synchronous code ******") ;
 
-console.log("**** Node.js finished Execution ******") ;
